@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "eBay Pricing Extension",
+    "description": "Displays the price for an item last sold for on eBay's sold listings, its watch count, and its MSRP value",
+    "version": "1.0",
+    "permissions": [
+      "https://api.ebay.com/",
+      "https://www.ebay.com/",
+      "https://www.ebay.com/watch/*"
+    ],
+    "background": {
+      "scripts": ["background.js"]
+    },
+    "content_scripts": [{
+      "matches": ["https://www.ebay.com/*"],
+      "js": ["content.js"]
+    }],
+    "icons": {
+      "48": "icon.png",
+      "128": "icon-128.png"
+    }
+  }
+  
